@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BugSnapPro – Privacy Policy</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 0 24px;
+        color: #1a1a1a;
+        line-height: 1.7;
+      }
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 4px;
+      }
+      .meta {
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 32px;
+      }
+      h2 {
+        font-size: 1.2rem;
+        margin-top: 36px;
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 6px;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      li {
+        margin-bottom: 6px;
+      }
+      a {
+        color: #0066cc;
+      }
+      .highlight {
+        background: #f0f7ff;
+        border-left: 4px solid #0066cc;
+        padding: 12px 16px;
+        border-radius: 4px;
+        margin: 16px 0;
+      }
+      .highlight-green {
+        background: #f0fff4;
+        border-left: 4px solid #16a34a;
+        padding: 14px 18px;
+        border-radius: 4px;
+        margin: 16px 0;
+        font-size: 1rem;
+      }
+      .highlight-green strong {
+        color: #15803d;
+      }
+      .highlight-yellow {
+        background: #fffbeb;
+        border-left: 4px solid #d97706;
+        padding: 14px 18px;
+        border-radius: 4px;
+        margin: 16px 0;
+        font-size: 1rem;
+      }
+      .highlight-yellow strong {
+        color: #b45309;
+      }
+      .badge {
+        display: inline-block;
+        background: #16a34a;
+        color: white;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 2px 10px;
+        border-radius: 20px;
+        letter-spacing: 0.05em;
+        margin-left: 8px;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Privacy Policy</h1>
+    <p class="meta">
+      Extension: <strong>BugSnapPro</strong> &nbsp;|&nbsp; Last updated:
+      <strong>April 6, 2026</strong>
+    </p>
+
+    <div class="highlight">
+      BugSnapPro is a developer tool designed solely for capturing browser bug
+      reports. All data collected by this extension is used exclusively for
+      generating a local debug report at the user's explicit request.
+      <strong
+        >No data is transmitted to any external server, sold, or shared with any
+        third party.</strong
+      >
+    </div>
+
+    <div class="highlight-green">
+      🔒 <strong>100% Local — No Server Involved.</strong> BugSnapPro does
+      <strong>not</strong> have a backend server. All data accessed during a bug
+      capture session — including screen recordings, console logs, network
+      requests, cookies, and browser storage — is processed and remains
+      <strong>entirely on your local machine</strong>, inside your browser.
+      Nothing leaves your device unless <em>you</em> choose to export and share
+      the report yourself.
+    </div>
+
+    <div class="highlight-yellow">
+      ⚠️ <strong>Important:</strong> When you export a bug report (e.g., as a
+      PDF or file), that file may contain sensitive page data such as cookies,
+      storage values, or network headers. Please review the report before
+      sharing it with others. The extension developer has no access to this data
+      at any point.
+    </div>
+
+    <h2>1. Overview</h2>
+    <p>
+      BugSnapPro ("the Extension") is a Chrome browser extension that helps
+      developers, QA teams, and testers capture comprehensive bug reports
+      including screen recordings, console logs, network activity, and browser
+      storage diagnostics. This Privacy Policy explains what data the Extension
+      accesses, why, how it is handled, stored, and shared (or not shared).
+    </p>
+
+    <h2>2. Data We Collect and Why</h2>
+    <p>
+      The Extension accesses the following data
+      <strong
+        >only when the user explicitly initiates a bug capture session</strong
+      >:
+    </p>
+    <ul>
+      <li>
+        <strong>Screen Recording (Tab Video):</strong> A video recording of the
+        active browser tab is captured using the <code>tabCapture</code> API.
+        This is used solely to visually document the bug being reported.
+      </li>
+      <li>
+        <strong>Console Logs:</strong> JavaScript console output (errors,
+        warnings, logs) from the active tab is collected via the
+        <code>debugger</code> API to provide runtime debugging context.
+      </li>
+      <li>
+        <strong>Network Requests:</strong> HTTP/HTTPS network requests made by
+        the active tab during the capture session are recorded via the
+        <code>debugger</code> API. This includes request URLs, methods, headers,
+        and response status codes.
+      </li>
+      <li>
+        <strong>Cookies:</strong> Cookies associated with the active tab's
+        website are inspected using the <code>cookies</code> API. This helps
+        diagnose session and authentication-related issues.
+      </li>
+      <li>
+        <strong
+          >Browser Storage (localStorage, sessionStorage, IndexedDB):</strong
+        >
+        Storage data from the active tab's origin is read using injected scripts
+        via the <code>scripting</code> API, to assist in diagnosing
+        state-related bugs.
+      </li>
+      <li>
+        <strong>Page Metadata:</strong> Information such as page URL, title,
+        user agent, and PWA-related details is collected from the active tab to
+        provide context for the bug report.
+      </li>
+      <li>
+        <strong>Extension Preferences:</strong> User preferences and temporary
+        session state (e.g., whether a recording is in progress) are stored
+        locally using the Chrome <code>storage</code> API.
+      </li>
+    </ul>
+
+    <h2>3. How Data Is Used</h2>
+    <p>
+      All data accessed by the Extension is used
+      <strong>exclusively</strong> to:
+    </p>
+    <ul>
+      <li>
+        Generate a local bug report (e.g., a PDF or exportable file) at the
+        user's request.
+      </li>
+      <li>
+        Display diagnostic information within the Extension's interface for the
+        user's review.
+      </li>
+      <li>
+        Temporarily store session state and preferences within the user's own
+        browser.
+      </li>
+    </ul>
+    <p>
+      The Extension does <strong>not</strong> use collected data for analytics,
+      advertising, profiling, or any purpose unrelated to bug report generation.
+    </p>
+
+    <h2>4. Data Storage</h2>
+    <div class="highlight-green">
+      🖥️ <strong>Your data never leaves your machine.</strong> BugSnapPro has no
+      server, no database, and no cloud backend. Every byte of data the
+      extension accesses stays on your local device.
+    </div>
+    <ul>
+      <li>
+        All captured data is stored
+        <strong>locally within the user's browser</strong> using Chrome's
+        built-in storage APIs.
+      </li>
+      <li>
+        Data is held only for the duration of the active bug capture session or
+        until the user clears it.
+      </li>
+      <li>
+        No data is written to any external database, cloud storage, or remote
+        server — not even temporarily.
+      </li>
+      <li>
+        The extension developer has <strong>zero access</strong> to any data you
+        capture.
+      </li>
+    </ul>
+
+    <h2>5. Data Sharing</h2>
+    <ul>
+      <li>
+        The Extension does <strong>not</strong> transmit any collected data to
+        the developer, to third-party services, or to any external server.
+      </li>
+      <li>
+        The Extension does <strong>not</strong> sell, rent, license, or
+        otherwise transfer user data to any party.
+      </li>
+      <li>
+        Bug reports generated by the Extension are exported
+        <strong>only by the user's explicit action</strong> (e.g., downloading a
+        file). The user controls where this report is shared.
+      </li>
+    </ul>
+
+    <h2>6. Third-Party Services</h2>
+    <p>
+      The Extension does not integrate with, or send data to, any third-party
+      analytics, advertising, or data processing services. No remote code is
+      executed by this Extension — all scripts are bundled locally within the
+      extension package.
+    </p>
+
+    <h2>7. Permissions Justification</h2>
+    <p>
+      Each Chrome permission requested by this Extension is required for its
+      core bug-capture functionality:
+    </p>
+    <ul>
+      <li>
+        <strong>activeTab:</strong> To access the currently active tab when the
+        user starts a capture session.
+      </li>
+      <li>
+        <strong>tabs:</strong> To identify and manage the active tab and open
+        the reporting interface.
+      </li>
+      <li>
+        <strong>scripting:</strong> To inject local scripts for collecting
+        page-level storage and DOM diagnostics.
+      </li>
+      <li>
+        <strong>storage:</strong> To save temporary session state and user
+        preferences locally.
+      </li>
+      <li>
+        <strong>debugger:</strong> To collect console logs and network request
+        data during a debugging session.
+      </li>
+      <li>
+        <strong>cookies:</strong> To inspect cookies of the reported website for
+        session/auth diagnostics.
+      </li>
+      <li>
+        <strong>tabCapture:</strong> To record the active tab's screen when the
+        user starts a recording.
+      </li>
+      <li>
+        <strong>Host permissions (&lt;all_urls&gt;):</strong> To allow the
+        Extension to function on any website where the user needs to capture a
+        bug report.
+      </li>
+    </ul>
+
+    <h2>8. Children's Privacy</h2>
+    <p>
+      This Extension is intended for use by developers, QA engineers, and
+      technical professionals. It is not directed at children under the age of
+      13, and we do not knowingly collect data from children.
+    </p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. Any changes will be
+      reflected by updating the "Last updated" date at the top of this page.
+      Continued use of the Extension after any changes constitutes acceptance of
+      the updated policy.
+    </p>
+
+    <h2>10. Contact</h2>
+    <p>
+      If you have any questions or concerns about this Privacy Policy, please
+      open an issue on the
+      <a href="https://github.com/devops-sunny/BugSnapPro" target="_blank"
+        >BugSnapPro GitHub repository</a
+      >
+      or contact the developer directly via GitHub.
+    </p>
+  </body>
+</html>
